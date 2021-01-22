@@ -1,5 +1,13 @@
 @import "semantic-ui";
 
-// Place all the styles related to the chatroom controller here.
+// Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.signin {
+
+display: grid; 
+align-content: center;
+margin-top: 100px;
+
+}
