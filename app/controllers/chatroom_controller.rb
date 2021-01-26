@@ -2,35 +2,36 @@ class ChatroomController < ApplicationController
 
 
 
-def show
+# def show
 
 
-end
+# end
 
 def index
+
 @messages = Message.all
 
 end
 
-def new
+# def new
 
-@message = Message.new
+# @message = Message.new
 
-end
+# end
 
-def create 
+# def create 
 
-@message = Message.create
+# @message = Message.create
 
-end
+# end
 
 
 
-private
+# private
 
-# Use callbacks to share common setup or constraints between actions.
-def set_message
-  @message = Message.find(params[:body])
-end
+# # Use callbacks to share common setup or constraints between actions.
+# def set_message
+#   @message = Message.find(params[:body])
+# end
 
 end
