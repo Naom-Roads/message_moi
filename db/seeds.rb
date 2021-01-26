@@ -10,3 +10,6 @@ User.create(username:"Naoms2", password:"Password2")
 User.create(username:"Naoms3", password:"Password3")
 User.create(username:"Naoms4", password:"Password4")
 User.create(username:"Naoms5", password:"Password5")
+
+Message.create(body:"Hi this is a message from me to you", user: User.first)
+Message.create(body:"I got your messages, nice to meet you", user: User.last)

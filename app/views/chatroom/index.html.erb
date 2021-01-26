@@ -9,72 +9,31 @@
         <div class="ui feed">
           <div class="event">
             <div class="label">
-              <img src="/images/avatar/small/elliot.jpg">
-            </div>
-            <div class="content">
-              <div class="summary">
-                <em>
-                  Elliot Fu</em>: Test Message
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="label">
-              <img src="/images/avatar/small/helen.jpg">
-            </div>
-            <div class="content">
-              <div class="summary">
-                <em>Helen Troy</em>: Test Message 
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="label">
-              <img src="/images/avatar/small/jenny.jpg">
-            </div>
-            <div class="content">
-              <div class="summary">
-                <a class="user">
-                  Jenny Hess
-                </a> added you as a friend
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="label">
-              <img src="/images/avatar/small/joe.jpg">
-            </div>
-            <div class="content">
-              <div class="summary">
-                <a>Joe Henderson</a> posted on his page
-              </div>
-              <div class="extra text">
-                Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="label">
               <img src="/images/avatar/small/justen.jpg">
             </div>
             <div class="content">
-              <div class="summary">
-                <em>Justen Kitsune</em>: Testing
-              </div>
+              <% @messages.each do |message|  %>
+                <div class="summary">
+                  <span><%= message.user.username %></span>
+                </div>
+                <div class="extra text">
+                  <span><%= message.body %></span>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>
       </div>
-      <div class="extra content">
-        <form class="ui reply form">
-          <div class="field">
-            <div class="ui fluid icon input">
-              <input type="text" placeholder="Enter a message..">
-              <i class="bordered inverted orange edit icon"></i>
-            </div>
+    </div>
+    <div class="extra content">
+      <form class="ui reply form">
+        <div class="field">
+          <div class="ui fluid icon input">
+            <input type="text" placeholder="Enter a message..">
+            <i class="bordered inverted orange edit icon"></i>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
   <div class="four wide column">
