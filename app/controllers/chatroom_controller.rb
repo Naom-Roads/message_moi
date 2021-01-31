@@ -8,8 +8,9 @@ before_action :require_user
 # end
 
 def index
+@message = Message.new
+@messages = Message.custom_display
 
-@messages = Message.all
 
 end
 
