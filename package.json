@@ -1,5 +1,5 @@
 {
   "name": "message_moi",
-  "private": false,
+  "private": true,
   "dependencies": {}
 }
