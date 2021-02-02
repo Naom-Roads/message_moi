@@ -11,6 +11,18 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def signup
+    @user = User.new(user_params)
+    if @user.save
+      session[:user_id] = @user.id
+      flash[:notice] = "Welcome to the Message Moi #{@user.username}, you have successfully signed up"
+      redirect_to root_path
+    else
+      render 'new'
+
+    end
+  end
+
   def edit; end
 
   def create
@@ -46,8 +58,8 @@ class UsersController < ApplicationController
     #   # end
 
     #   # Only allow a list of trusted parameters through.
-    #   def user_params
-    #     params.require(:user).permit(:username)
-    #   end
+    def user_params
+      params.require(:user).permit(:username, :email, :password)
+    end
   end
 end
