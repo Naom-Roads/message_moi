@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   delete 'logout', to: 'users#destroy'
   post 'message', to: 'messages#create' 
 
-  mount ActionCable.server, at: '/cable'
+ 
+
+  Rails.application.routes.draw do
+    mount ActionCable.server, at: '/cable'
+  end
 
 end
