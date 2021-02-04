@@ -15,7 +15,7 @@
 //= require activestorage
 //= require turbolinks
 //= require semantic-ui
-//= require_tree ./channels
+//= require_tree .
 
 scroll_bottom = function() {
     if ($('#messages').length > 0) {
